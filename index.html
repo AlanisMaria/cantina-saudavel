@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantina Saudável</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> </head>
+<body>
+
+    <div id="app">
+
+        <div id="role-selection-screen" class="screen active">
+            <header class="main-header">
+                <div>
+                    <img src="https://i.imgur.com/gAm9N2u.png" alt="Logo Paraná" style="height: 40px;">
+                    <span>Secretaria da Educação</span>
+                </div>
+                <div class="logo-cantina">
+                    <img src="https://i.imgur.com/2a23J63.png" alt="Logo Cantina" style="height: 40px;">
+                </div>
+            </header>
+            <main class="content-center">
+                <h1>Cantina saudável</h1>
+                <div class="role-buttons">
+                    <button id="aluno-btn">
+                        <i class="fas fa-user"></i> Aluno
+                    </button>
+                    <button id="adm-btn">
+                        <i class="fas fa-cog"></i> ADM
+                    </button>
+                </div>
+            </main>
+        </div>
+
+        <div id="aluno-login-screen" class="screen">
+             <main class="content-center login-container">
+                <h2>Bem-vindo aluno</h2>
+                <input type="text" placeholder="@escola" value="aluno@escola.com">
+                <input type="password" placeholder="Senha" value="123">
+                <button class="login-submit-btn">enviar</button>
+            </main>
+        </div>
+
+        <div id="adm-login-screen" class="screen">
+            <main class="content-center login-container">
+                <h2>Bem-vindo ADM</h2>
+                <input type="text" placeholder="Cpf" value="12345678900">
+                <input type="password" placeholder="Senha" value="admin123">
+                <button class="login-submit-btn">enviar</button>
+            </main>
+        </div>
+
+        <div id="cardapio-screen" class="screen">
+            <header class="app-header">
+                 <img src="https://i.imgur.com/gAm9N2u.png" alt="Logo Paraná" style="height: 40px;">
+                <div class="header-icons">
+                    <button id="cart-btn" class="icon-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </button>
+                    <button class="icon-btn"><i class="fas fa-user"></i></button>
+                </div>
+            </header>
+            <main>
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="pesquisar">
+                </div>
+                <div id="cardapio-list">
+                    </div>
+            </main>
+        </div>
+       
+        <div id="cart-screen" class="screen">
+            <header class="app-header">
+                <button id="back-to-cardapio" class="icon-btn"><i class="fas fa-arrow-left"></i> Voltar</button>
+                <h2>Meu Carrinho</h2>
+                <button id="clear-cart-btn" class="icon-btn"><i class="fas fa-trash"></i></button>
+            </header>
+            <main>
+                <div id="cart-items-container">
+                    </div>
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-price">R$0,00</span>
+                </div>
+                <button id="checkout-btn">finalizar</button>
+            </main>
+        </div>
+
+        <div id="adm-dashboard-screen" class="screen">
+            <header class="app-header">
+                <img src="https://i.imgur.com/gAm9N2u.png" alt="Logo Paraná" style="height: 40px;">
+                <div>
+                     <span>itens</span>
+                     <button class="icon-btn"><i class="fas fa-user-cog"></i></button>
+                </div>
+            </header>
+            <main class="dashboard">
+                <div id="pedidos-do-dia" class="order-column">
+                    <h3>pedidos do dia</h3>
+                    <div class="order-list"></div>
+                </div>
+                <div id="em-preparacao" class="order-column">
+                    <h3>em preparação</h3>
+                    <div class="order-list"></div>
+                </div>
+                <div id="entregue" class="order-column">
+                    <h3>entregue</h3>
+                    <div class="order-list"></div>
+                </div>
+            </main>
+        </div>
+
+    </div>
+
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
